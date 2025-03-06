@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export interface TestimonialBlock {
-  __component: "blocks.testimonial";
+  __component: "blacks.testimonial";
   id: number;
   authorName: string;
   quote: string;

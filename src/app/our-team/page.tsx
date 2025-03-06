@@ -1,6 +1,6 @@
-import Link from "next/link";
 import qs from "qs";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getTeamMembers() {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:1337";
@@ -14,6 +14,7 @@ async function getTeamMembers() {
         fields: ["alternativeText", "name", "url"],
       },
     },
+  
   });
 
   const res = await fetch(url);

@@ -8,13 +8,13 @@ const blocks: Record<
   TeamPageBlock["__component"],
   React.ComponentType<{ block: TeamPageBlock }>
 > = {
-  "blocks.spoiler": ({ block }: { block: TeamPageBlock }) => (
+  "blacks.spoiler": ({ block }: { block: TeamPageBlock }) => (
     <SpoilerBlock block={block as SpoilerBlock} />
   ),
-  "blocks.testimonial": ({ block }: { block: TeamPageBlock }) => (
+  "blacks.testimonial": ({ block }: { block: TeamPageBlock }) => (
     <TestimonialBlock block={block as TestimonialBlock} />
   ),
-  "blocks.rich-text": ({ block }: { block: TeamPageBlock }) => (
+  "blacks.rich-text": ({ block }: { block: TeamPageBlock }) => (
     <RichTextBlock block={block as RichTextBlock} />
   ),
 };

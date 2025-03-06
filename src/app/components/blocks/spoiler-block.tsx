@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export interface SpoilerBlock {
-  __component: "blocks.spoiler";
+  __component: "blacks.spoiler";
   id: number;
   title: string;
   content: string;

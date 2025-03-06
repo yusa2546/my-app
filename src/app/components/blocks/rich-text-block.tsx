@@ -8,7 +8,7 @@ from "@strapi/blocks-react-renderer";
 import Image from "next/image";
 
 export interface RichTextBlock {
-  __component: "blocks.rich-text";
+  __component: "blacks.rich-text";
   id: number;
   content: BlocksContent;
 }

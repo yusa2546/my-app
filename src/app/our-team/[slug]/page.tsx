@@ -4,7 +4,7 @@ import { BlockRenderer, TeamPageBlock } from "@/app/components/blocks";
 
 async function getTeamMember(slug: string) {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:1337";
-  const path = "/api/team-members";
+  const path = "/api/team-members/";
 
   const url = new URL(path, baseUrl);
 
@@ -15,36 +15,31 @@ async function getTeamMember(slug: string) {
       },
       blocks: {
         on: {
-          "blocks.testimonial": {
+          "blacks.testimonial": {
             populate: {
               photo: {
                 fields: ["alternativeText", "name", "url"],
               },
             },
           },
-          "blocks.spoiler": {
+          "blacks.spoiler": {
             populate: true,
           },
-          "blocks.rich-text": {
+          "blacks.rich-text": {
             populate: true,
           },
         },
       },
     },
-    filters: {
-      slug: {
-        $eq: slug, // This is the slug for our team member
-      },
-    },
   });
 
   const res = await fetch(url);
+  console.log(res);
 
   if (!res.ok) throw new Error("Failed to fetch team members");
 
   const data = await res.json();
   const teamMember = data?.data[0];
-  console.dir(teamMember, { depth: null });
   return teamMember;
 }
 
